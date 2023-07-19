@@ -1,3 +1,3 @@
 # First
 
-These are smaple projects from free codecamp but it is not copying from other, just smaple certificate projects.
+These are sample projects from free codecamp but it is not copied from other, just sample certificate projects.
