@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servy Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<header>
+    <h1 id="title">Servy Form</h1>
+    <p id="description">Please fill out information below.</p>
+</header>
+<body>
+
+    <form action="index.html" method="post" id="survey-form">
+       <section>
+            <fieldset>
+                <label id="name-label" for="name">Name: <input type="text" name="name" id="name" placeholder="Enter your name" required></label>
+                <label id="email-label" for="email">Email: <input type="email" name="email" id="email" placeholder="Enter your Email" required></label>
+                <label id="number-label" for="number">Age: <input type="number" name="number" id="number" min="10" max="120" placeholder="Age" required></label>
+            </fieldset>
+       </section>
+       
+       <section>       
+            <fieldset>
+                <p>Sex Type: </p>
+                <select name="select" id="dropdown">
+                    <option value="">Choose One</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                </select>
+            </fieldset>
+       </section>
+
+       <section>
+        <fieldset>
+            <label for="radio"><input type="radio" id="radio" name="radio" class="inline" value="1"> Student</label>
+            <label for="radio"><input type="radio" name="radio" id="radio" class="inline" value="2"> Non-student</label>
+        </fieldset>
+       </section>
+
+       <section>
+        <fieldset>
+            <p>What do you like to do?</p>
+            <label for="football"><input type="checkbox" name="football" id="football" class="inline" value="1"> Football</label>
+            <label for="baskball"><input type="checkbox" name="baskball" id="baskball" class="inline" value="2"> Baskball</label>
+            <label for="swimming"><input type="checkbox" name="swimming" id="swimming" class="inline" value="3"> Swimming</label>
+            <label for="none"><input type="checkbox" name="none" id="none" class="inline" value="4"> None of them</label>
+        </fieldset>
+       </section>
+
+       <section>
+        <fieldset>
+            <label for="comment">Write Some comments <textarea name="comment" id="comment" cols="30" rows="10" placeholder="I am feeling good today..."></textarea></label>            
+        </fieldset>
+       </section>
+
+       <section>
+        <fieldset>
+            <input type="submit" value="Submit" id="submit">
+        </fieldset>
+       </section>
+    </form>
+</body>
+</html>
