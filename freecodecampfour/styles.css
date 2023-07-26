@@ -1,0 +1,249 @@
+:root {
+  /* Font size variables */
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 18px;
+  --font-xl: 24px;
+
+  /* Font family variables */
+  --font-primary: "Roboto", Arial, sans-serif;
+  --font-secondary: "Open Sans", Arial, sans-serif;
+
+  /*background color*/
+  --primary-background: rgb(211, 232, 251);
+  --secondary-background: rgb(236, 242, 247);
+  --third-background: rgb(75, 75, 254);
+
+  /*font color*/
+  --target-section-color: rgb(248, 222, 225);
+
+  /*border color*/
+  --border-color: rgb(83, 83, 83);
+}
+
+* {
+  font-family: var(--font-primary), var(--font-secondary);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-background);
+}
+
+.logo {
+  max-width: 30em;
+  height: 100%;
+  margin-left: 3rem;
+}
+
+#header-img {
+  width: 25%;
+}
+
+nav {
+  font-size: var(--font-lg);
+  width: 25em;
+  height: 55px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  width: 6rem;
+  height: 50px;
+  display: flex; /* Add flex display */
+  align-items: center; /* Center the text vertically */
+  justify-content: center; /* Center the text horizontally */
+}
+
+nav a:hover {
+  color: blue;
+  font-size: larger;
+}
+
+#section1 {
+  background-color: var(--secondary-background);
+  padding: 20px;
+  margin-top: 10px;
+  height: 79vh;
+  transition: background-color 0.3s ease; /* Smooth transition when changing the background color */
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+}
+
+.away-botton {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--primary-background);
+}
+
+#section1 #video {
+  position: relative;
+  height: 50vh;
+}
+
+div[id^="section"] :target {
+  background-color: var(--target-section-color);
+}
+
+#section2 {
+  background-color: var(--secondary-background);
+  height: 50vh;
+  transition: background-color 0.3s ease;
+  padding-top: 10px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 50px;
+}
+
+.text-box {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-box label {
+  width: 5em;
+  background-color: var(--third-background);
+  font-size: var(--font-lg);
+  height: 53px;
+  border: 1px solid var(--third-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="email"] {
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  border-radius: none;
+}
+
+#email::placeholder {
+  color: gray !important;
+  align-items: center;
+  font-style: italic;
+  text-align: center;
+}
+
+input[type="submit"] {
+  width: 130px;
+  height: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--primary-background);
+  border-radius: 30px;
+  border: 1px solid rgb(1, 31, 100);
+}
+
+#section{
+    margin-top: 20px;
+}
+
+.flex-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.gallary{
+    border: solid 2px var(--border-color);
+    border-radius: 10px;
+}
+
+.gallary img {
+  width: 100%;
+  max-width: 380px;
+  height: 330px;
+  object-fit: cover;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.gallary p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-background);
+    height: 50px;
+    margin: 0;
+    text-transform: capitalize;
+    border-radius: 0 0 10px 10px;
+}
+
+
+/* Your existing CSS styles here */
+
+/* Media query for small screens (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    /* Adjust styles for small screens here */
+  
+    nav {
+      flex-direction: column; /* Change to a vertical layout for small screens */
+      height: auto; /* Allow the navigation to adjust its height based on content */
+    }
+  
+    nav a {
+      width: auto; /* Allow the navigation links to take the width they need */
+      margin: 5px; /* Add some space between the navigation links */
+    }
+  
+    .text-box {
+      flex-direction: column; /* Change to a vertical layout for small screens */
+      align-items: center; /* Center the elements vertically */
+    }
+  
+    input[type="email"] {
+      width: 100%; /* Make the email input take full width on small screens */
+    }
+  }
+  
+  /* Media query for medium screens (min-width: 601px) and large screens (min-width: 1200px) */
+  @media screen and (min-width: 601px) and (min-width: 1200px) {
+    /* Adjust styles for medium and large screens here */
+  
+    nav a {
+      width: 6rem; /* Restore the original width for medium and large screens */
+      margin: 0; /* Remove the margin for medium and large screens */
+    }
+  }
+  
+  /* Add more media queries as needed for other screen sizes */
+  
