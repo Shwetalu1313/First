@@ -8,18 +8,22 @@
     <!-- Header -->
     <header id="header">
       <div class="logo">
-        <img
-          src="https://pngimg.com/uploads/php/php_PNG26.png"
-          alt="Logo"
-          id="header-img"
-        />
+        <label for="check" class="check-label"
+          ><img
+            src="https://pngimg.com/uploads/php/php_PNG26.png"
+            alt="Logo"
+            id="header-img"
+        /></label>
       </div>
+      <!-- hello -->
 
       <nav id="nav-bar">
         <a href="#section1" class="nav-link">Video</a>
         <a href="#section2" class="nav-link">Contact</a>
         <a href="#section3" class="nav-link">Developers</a>
       </nav>
+
+      <input type="checkbox" name="" id="check" />
     </header>
 
     <!-- Video Section -->
@@ -27,11 +31,8 @@
       <h1>Product Video</h1>
       <div class="video">
         <iframe
-          width="842"
-          height="430"
           src="https://www.youtube.com/embed/kxy_ouh2WG8?list=RDkxy_ouh2WG8"
           title="3:00 Am - Zach Diamond (Official Audio)"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
           id="video"
@@ -152,4 +153,12 @@
       </div>
     </div>
   </body>
+  <script>
+      const lbl = document.getElementsByClassName('.check-label');
+      const chk = document.getElementById('check');
+
+      menuIcon.addEventListener('click', () => {
+        checkBox.checked = !checkBox.checked;
+      })
+  </script>
 </html>
